@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Figtree', sans-serif;   
+    background-color:rgb(255, 255, 255);  
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.flex-row{
+    flex-direction: row;
+}
+.flex-col{
+    flex-direction: column;
+}
+.navigation-bar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+}
+.blur-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+.content-layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+.navigation-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+.logo-div{
+    height: 90%;
+    width: 18   0px;
+}
+.logo-div img{
+    height: 100%;
+    width: 100%;
+}
+.navigation-content {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-content-1{
+    width: 20;
+    height: 30px;
+    /* background-color: #004aad; */
+}
+
+.navigation-content-highlight {
+    height: 4px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: rgb(200, 76, 5);
+} 
+.black {
+    color: black !important;
+    cursor: pointer;
+}
+a.black:hover {
+    color: rgb(52, 76, 183) !important;
+}
+.signup-and-login-buttons{
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;        
+    align-items: center;
+}
+.btn-primary-custom {
+    background-color: rgb(255, 255, 255); 
+    color: black;
+    border-radius: 9px; 
+    font-size: 16px;
+    padding: 10px 40px;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+}
+.btn-primary-custom:hover {
+    background-color: #004aad; 
+    color: white; 
+    border: none;
+}
+.btn-primary-custom:hover ~ .btn-secondary-custom {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0); 
+    border: 1px solid black;
+}
+.btn-secondary-custom {
+    background-color: #004aad;
+    color: white; 
+    border-radius: 9px; 
+    font-size: 16px;
+    padding: 10px 40px;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-secondary-custom:hover {
+    background-color:  #279eff; 
+    border: 1px solid black;
+}
+.main {
+    width: 100%;
+    padding: 6% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.get-start{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    /* background-color: #004aad; */
+}
+.introduce-div{
+    width: 100%;
+    height: 25%;
+    border-radius: 10px;
+    background-color: rgb(196, 217, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 50px;
+}
+.introduce-div-1{
+    width: 25%;
+    height: 100%;
+    /* background-color: black; */
+}
+.introduce-div-2{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.introduce-div-3{
+    padding: 10px;
+    width: 60%;
+    height: 100%;
+    /* background-color: white; */
+}
+.introduce-div-3 a{
+    font-family: 'Figtree', sans-serif;   
+    text-decoration: none;
+}
+.introduce-div-4 {
+    height: 50%;
+    width: 50%;
+}
+.introduce-div-4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.font-size-15{
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+}
+.font-size-30{
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 30px;
+    font-weight: 800;
+    color: #004aad;
+
+}
+.font-size-m {
+    font-size: 18px !important;
+    font-weight: bolder !important;
+}
