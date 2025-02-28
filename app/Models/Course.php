@@ -8,12 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
-    public function owner() {
-        return $this->belongsTo(User::class, 'owner_id');
+
+    protected $fillable = [
+        'title',        // Thêm vào danh sách fillable
+        'description',  // Thêm vào danh sách fillable
+        'teacher_id',   // Thêm vào danh sách fillable
+    ];
+
+    // Mối quan hệ với giáo viên (người tạo khóa học)
+    public function teacher()
+    {
+        return $this->belongsTo(User::class, 'teacher_id');
     }
-    
-    public function enrolledUsers() {
-        return $this->belongsToMany(User::class);
+
+    public function students()
+    {
+        return $this->belongsToMany(User::class, 'enrollments', 'course_id', 'student_id');
     }
-    
+
 }
