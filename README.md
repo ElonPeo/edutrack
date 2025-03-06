@@ -1,66 +1,142 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<p align="center"><b>COURSE OFFERING AND GRADING WEBAPP</b></p>
 
-## About Laravel
+### Tổng quát
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Đây là một dự án CRUD nhỏ sử dụng Laravel, một khuôn khổ mạnh mẽ dựa trên PHP.
+Trong dự án này, tôi tập trung vào việc xây dựng một trang web giáo dục, cho phép giáo viên cung cấp các khóa học, học sinh có thể tham gia và rời đi nếu muốn, đây là một dự án đơn giản đầy đủ chức năng CRUD để làm quen với laravel và cách triển khai chúng trên môi trường thực tế 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Đây là tên miền mà tôi đã triển khai: http://vietnamurbanmanagement.online
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Đối với giáo viên
 
-## Laravel Sponsors
+1. Quản lý tài khoản:
+    - Tạo tài khoản
+    - Đăng nhập, đăng xuất
+    - Xóa tài khoản
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. Quản lý khóa học:
+    - Thêm mới khóa học
+    - Xóa khóa học đã có 
+    - Sửa khóa học
 
-### Premium Partners
+3. Chấm điểm:
+    - Chấm điểm cho từng học sinh
+    - Chấm điểm cho tất cả học sinh
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+#### Dối với học sinh
 
-## Contributing
+1. Quản lý tài khoản:
+    - Tạo tài khoản
+    - Đăng nhập, đăng xuất
+    - Xóa tài khoản
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Quản lý khóa học:
+    - Hiển thị khóa học đang có
+    - Hiển thị khóa học đã tham gia
+    - Tham gia khóa học
+    - Rời khóa học
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+### Sơ đồ Use-case
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![Screenshot 2025-02-28 103248](https://hackmd.io/_uploads/r11kJ3R51l.png)
 
-## License
+Gồm 3 nhóm chức năng chính: 
+1.1 Nhóm chức năng xác thực
+1.2 Tham gia khóa học 
+1.3 Thêm sửa xóa khóa học
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Cấu hình cơ sở dữ liệu
+### Mô hình quan hệ thực thể
+
+![Screenshot 2025-03-07 050536](https://hackmd.io/_uploads/SJ8C2qPi1e.png)
+
+
+Gồm 3 thực thể: Giáo viên, học sinh, khóa học. Trong đó:
+Giáo viên có thể có nhiều khóa học
+Mỗi khóa học chỉ có 1 giáo viên 
+Học sinh có nhiều khóa học
+Khóa học có nhiều học sinh
+
+
+
+### Cách trang web triển khai lên mạng công khai
+
+B1: Đăng kí https://console.aiven.io/ để tạo cơ sở dữ liệu đám mây 
+    Cấu hình .env:
+    
+    DB_CONNECTION=your_connect_aivencloud.com
+    DB_HOST=127.0.0.1
+    DB_PORT= your_port(XXXX)
+    DB_DATABASE=your_database
+    DB_USERNAME= your_DB_USERNAME
+    DB_PASSWORD= your_DB_PASSWORD
+
+B2: Đăng kí https://account.godaddy.com/ để thuê domain
+    Lựa chọn tên domain phù hợp.
+
+B3: Chuẩn bị 1 sever có địa chỉ ip công cộng tĩnh (Virtual Private Server) 
+    Tải dự án về máy chủ: ```git clone https://github.com/ElonPeo/edutrack.git```
+    Tạo khóa ứng dụng: ``` php artisan key:generate```
+    Chuẩn bị cơ sở dữ liệu: ``` php artisan migrate```
+    
+B4: Cài đặt môi trường apache trên máy chủ:
+    Sửa nội dung file:``` C:\xampp\apache\conf\extra\httpd-vhosts.conf ```
+    
+    <VirtualHost *:80>
+    ServerAdmin admin@your_domain.site
+    DocumentRoot "C:/xampp/htdocs/ten_du_an/public"
+    ServerName your_domain.site
+    ServerAlias www.your_domain.site
+    <Directory "C:/xampp/htdocs/ten_du_an/public">
+        AllowOverride All
+        Require all granted
+        </Directory>
+    </VirtualHost>
+B5: Cấu hình host:
+    Tìm đến file: ```  C:\Windows\System32\drivers\etc\hosts ```
+    Thêm dòng mới: ```  127.0.0.1 your_domain.site ```
+    Khởi động lại Apache.
+
+B6: Trỏ static ip của sever tới Domain Name System 
+    Thêm bản ghi mới: 
+    
+    Type: A
+    Host: @
+    Value: XX.XXX.XXX.XXX (static ip của sever)
+    TTL: 600 (Thời gian lan truyền tiên miền có hiệu lực)
+
+B7: Truy cập website của bạn và kiểm thử.
+    
+
+
+### Project's screeshots
+
+#### Trang mở đầu 
+![Screenshot 2025-03-07 054510](https://hackmd.io/_uploads/SyxAriwoke.png)
+#### Đăng nhập
+![image](https://hackmd.io/_uploads/r1te8swsJe.png)
+#### Đăng kí
+![image](https://hackmd.io/_uploads/SJ07UoPo1e.png)
+#### Hiển thị khóa học (teacher)
+![Screenshot 2025-03-07 054915](https://hackmd.io/_uploads/SJxqj8jwjyl.png)
+#### Thêm khóa học mới 
+![Screenshot 2025-03-07 055115](https://hackmd.io/_uploads/B1XEPsDokx.png)
+#### Sửa thông tin khóa học 
+![Screenshot 2025-03-07 055300](https://hackmd.io/_uploads/By2uDiPoJl.png)
+#### Hiển thị thông tin người đăng nhập, xóa, sửa thông tin tài khoản
+![Screenshot 2025-03-07 055418](https://hackmd.io/_uploads/HJGpDjwoye.png)
+#### Đổi mật khẩu
+![Screenshot 2025-03-07 055621](https://hackmd.io/_uploads/SJ-NOowjkg.png)
+#### Giao diện tham gia và rời khóa học(student)
+![image](https://hackmd.io/_uploads/r1oYdsPoJg.png)
+
+
+
