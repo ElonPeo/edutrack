@@ -9,10 +9,7 @@ class Enrollment extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'student_id',
-        'course_id',
-    ];
+    protected $fillable = ['course_id', 'student_id', 'score'];
 
     // Mối quan hệ: Mỗi enrollment thuộc về một học sinh
     public function student()

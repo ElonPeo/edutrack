@@ -1,99 +1,66 @@
----
-title: '#EduTrack'
-
----
-
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center"><b>COURSE OFFERING AND GRADING WEBAPP</b></p>
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-### Tổng quát
+## About Laravel
 
-Đây là một dự án CRUD nhỏ sử dụng Laravel, một khuôn khổ mạnh mẽ dựa trên PHP.
-Trong dự án này, tôi tập trung vào việc xây dựng một trang web giáo dục, cho phép giáo viên cung cấp các khóa học cho sinh viên và cũng cho điểm sinh viên của mình.
-Sinh viên có thể đăng ký bất kỳ khóa học nào do giáo sư cung cấp và họ có thể xem bảng điểm cho khóa học tương ứng.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-Here is the deployment of this project: [Course Offering]
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Learning Laravel
 
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-#### Đối với giáo viên
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-1. Quản lý tài khoản:
-    - Tạo tài khoản
-    - Đăng nhập, đăng xuất
-    - Xóa tài khoản
+## Laravel Sponsors
 
-2. Quản lý khóa học:
-    - Thêm mới khóa học
-    - Xóa khóa học đã có 
-    - Sửa khóa học
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-3. Chấm điểm:
-    - Chấm điểm cho từng học sinh
-    - Chấm điểm cho tất cả học sinh
+### Premium Partners
 
-#### Dối với học sinh
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
-1. Quản lý tài khoản:
-    - Tạo tài khoản
-    - Đăng nhập, đăng xuất
-    - Xóa tài khoản
+## Contributing
 
-2. Quản lý khóa học:
-    - Hiển thị khóa học đang có
-    - Hiển thị khóa học đã tham gia
-    - Tham gia khóa học
-    - Rời khóa học
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
+## Code of Conduct
 
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-### Sơ đồ Use-case
+## Security Vulnerabilities
 
-![Screenshot 2025-02-28 103248](https://hackmd.io/_uploads/r11kJ3R51l.png)
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-Gồm 3 nhóm chức năng chính: 
-1.1 Nhóm chức năng xác thực
-1.2 Tham gia khóa học 
-1.3 Thêm sửa xóa khóa học
+## License
 
-## Cấu hình cơ sở dữ liệu
-### Mô hình quan hệ thực thể
-![Screenshot 2025-02-28 100420](https://hackmd.io/_uploads/HkXTuiC9Je.png)
-
-Gồm 3 thực thể: Giáo viên, học sinh, khóa học. Trong đó:
-Giáo viên có thể có nhiều khóa học
-Mỗi khóa học chỉ có 1 giáo viên 
-Học sinh có nhiều khóa học
-Khóa học có nhiều học sinh
-
-
-
-### Cách trang web triển khai lên mạng công khai
-
-Để Triển khai cần chuẩn bị các công cụ:
-
-
-B1: Đăng kí https://console.aiven.io/ để tạo cơ sở dữ liệu đám mây 
-    Cấu hình .env
-    DB_CONNECTION=mysql-c7b1f37-bohaohieu2-87d3.h.aivencloud.com
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=your_database
-    DB_USERNAME=root
-    DB_PASSWORD=
-B2: Chuẩn bị 1 máy chủ có địa chỉ ip công cộng tĩnh (Virtual Private Server)
-    - Cài đặt môi trường trên máy chủ 
-    - Tải và cài đặt xampp
-    - Cấu hình apache
-    
-
-B2: Chuẩn bị 1 tên miền 
-    - Thuê 1 tên miền trên godaddy
-    - Vd: edutrack.site
-    - Trỏ ip máy chủ tới tên miền 
-
-
-### Project's screeshots
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

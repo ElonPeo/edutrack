@@ -17,7 +17,6 @@
 <body class="auth-body">
     @include('components.navigationBar')
 
-
     <div class="login-back-div">
         <video autoplay loop muted playsinline class="video-bg">
             <source src="../assets/videos/edutrack.mp4" type="video/mp4">
@@ -97,11 +96,6 @@
 
 
 
-    <!-- {{-- Đăng xuất --}}
-    <form method="POST" action="{{ route('logout') }}">
-        @csrf
-        <button type="submit">Logout</button>
-    </form>  -->
 
     {{-- Hiển thị lỗi --}}
     @if ($errors->any())

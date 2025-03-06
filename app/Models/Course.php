@@ -13,6 +13,7 @@ class Course extends Model
         'title',        // Thêm vào danh sách fillable
         'description',  // Thêm vào danh sách fillable
         'teacher_id',   // Thêm vào danh sách fillable
+        'video_url',   // Thêm vào danh sách fillable
     ];
 
     // Mối quan hệ với giáo viên (người tạo khóa học)
@@ -24,6 +25,11 @@ class Course extends Model
     public function students()
     {
         return $this->belongsToMany(User::class, 'enrollments', 'course_id', 'student_id');
+    }
+
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class, 'course_id');
     }
 
 }
